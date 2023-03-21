@@ -20,7 +20,7 @@ seedChara = [
       tiTokLink: `https://www.tiktok.com/@_celestialelle_`,
     },
     {
-        image: 'https://i.imgur.com/bytVvZh.png',
+        image: 'https://i.imgur.com/pKZuejC.png',
         name: 'Wren Devlin',
         birthday: 'April 31',
         zodiac: 'Taurus',
@@ -40,7 +40,7 @@ seedChara = [
         tiTokLink: `https://www.tiktok.com/@_celestialelle_`,
       },
     {
-      image: `https://i.imgur.com/BVVhTnq.jpg`,
+      image: `https://i.imgur.com/6AvsJfs.png`,
       name: 'Anisa Lipatti',
       birthday: 'June 5',
       zodiac: 'Gemini',
@@ -80,8 +80,8 @@ seedChara = [
         tiTokLink: `https://www.tiktok.com/@_celestialelle_`,
       },
       {
-      image: 'https://i.imgur.com/0gxmqMR.jpg',
-      name: 'Eira (Princess Eira of the Cháillay Forest. First Daughter of Queen Elphame and King Christsonday. Sole heir of the Throne of the Fey)',
+      image: 'https://i.imgur.com/lJzjX5D.png',
+      name: 'Eira',
       birthday: 'October 31',
       zodiac: 'Scorpio',
       birthplace: 'Cháillay Forest',
@@ -100,7 +100,7 @@ seedChara = [
       tiTokLink: `https://www.tiktok.com/@_celestialelle_`,
     },
     {
-      image: 'https://i.imgur.com/kIIjaGo.jpg',
+      image: 'https://i.imgur.com/OySHFlv.png',
       name: 'Ciel Aether',
       birthday: 'N/A',
       zodiac: 'N/A',
@@ -120,7 +120,7 @@ seedChara = [
       tiTokLink: `https://www.tiktok.com/@_celestialelle_`,
     },
     {
-        image: 'https://i.imgur.com/aEiAaM6.jpg',
+        image: 'https://i.imgur.com/9oPkVJr.png',
         name: 'Denali Oren',
         birthday: 'N/A',
         zodiac: 'N/A',
@@ -161,6 +161,6 @@ seedChara = [
       }
 ]
 
-const chara = mongoose.model('Chara', charaSchema);
+// const chara = mongoose.model('chara', charaSchema);
 
-module.exports = chara
+module.exports = seedChara

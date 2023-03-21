@@ -1,4 +1,44 @@
-<%-include('./partials/header.ejs')%>
+
+<%-include('./partials/header.ejs')%>  
+<link href="/css/styleIndex.css" type="text/css" rel="stylesheet"> 
+</head>
+<body>
+<a href="/ocparadise"><img src="https://i.imgur.com/m7kJuH2.png" alt="logo" class="logo"></a>
+
+<h1>Welcome to Paradise</h1>
+<nav>
+    <button><a href="/ocparadise/new"><strong>Make a Character</strong></a></button>
+</nav> 
+<div class="background">
+    <div class="container">
+    <div class="content">
+    <ul>
+        <div class="wrapper">
+        <!-- <div class="fullwrap">  -->
+
+        <% for (let i = 0; i < Chara.length; i++ ) { %>
+            <li>
+                <div class="fullwrap"> 
+                <a href="/ocparadise/<%=i%>">
+                    <div class="wrapper">
+                    <!-- <div class="fullwrap">  -->
+                    <img src="<%=seedChara[i].image%>" id="display-img" style="width: 250px; height: 250px; border-radius: 1000px;"/>
+                    <div class="fullcap">
+                    <%=seedChara[i].name.charAt(0).toUpperCase() + seedChara[i].name.slice(1)%>
+                    </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+                    <form action="/ocparadise/<%= i %>/edit" method="GET">
+                        <button type="submit">Edit</button>
+                    </form>
+                    <form action="/ocparadise/<%= i %>/?_method=DELETE" method="POST">
+                        <button type="submit">Delete</button>
+                    </form>
+                </a>
+            </li>
+        <% } %>
+    </ul>
 
 
 

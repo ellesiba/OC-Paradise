@@ -1,6 +1,45 @@
 <%-include('./partials/header.ejs')%>
+<link href="/css/styleShow.css" type="text/css" rel="stylesheet"> 
+</head>
+<body>
+<a href="/ocparadise"><img src="https://i.imgur.com/m7kJuH2.png" alt="logo" class="logo"></a>
+<!-- <img src="<%= chara.image %>" alt="<%= chara.name %>;" id="chara-profile" style="width: 350px; height: 350px; border-radius: 1000px; text-align: center;"> -->
 
+<div class="background">
+  <div class="container">
+  <div class="content">
+<nav>
+  <button><a href="/ocparadise/new"><strong>Make a Character</strong></a></button>
+</nav> <br>
+<img class="pfp" src="<%= chara.image %>" alt="<%= chara.name %>;" id="chara-profile" style="width: 350px; height: 350px; border-radius: 1000px;">
+<div id="charaInfo" name="charaInfo" class="charaInfo" style=" word-wrap: break-word; size: 600;">
+    <h1><%= chara.name %></h1>
+    <ul>
+      <br>
+      <li><strong style="font-size: 30px;">Birthday:</strong ><%= chara.birthday %></li><br>
+      <li><strong style="font-size: 30px;">Zodiac:</strong> <%= chara.zodiac %></li><br>
+      <li><strong style="font-size: 30px;">Birthplace:</strong><%= chara.birthplace %></li><br>
+      <li><strong style="font-size: 30px;">Bio:</strong> <p><%= chara.bio %></p></li><br>
+      <li><strong style="font-size: 30px;">Idiosyncrasy:</strong> <p><%= chara.idiosyncrasy %></p></li><br>
+      <li><strong style="font-size: 30px;">Personality:</strong> <p><%= chara.personality %></p></li><br>
+        <li><strong style="font-size: 30px;">Relationships:</strong> <p><%= chara.relationships %></p></li><br>
+        <li><strong style="font-size: 30px;">Goals and Motivations:</strong> <p><%= chara.goalsMotivations %></p></li><br>
+        <li><strong style="font-size: 30px;">Fears and Weaknesses:</strong> <p><%= chara.fearsWeakness %></p></li><br>
+        <li><strong style="font-size: 30px;">Skills:</strong> <p><%= chara.skills %></p></li><br>
+        <li><strong style="font-size: 30px;">Most Treasured Possession:</strong> <p><%= chara.mostTreasured %></p></li><br>
+      <li><strong style="font-size: 30px;">Ask for permission to use:</strong> <%= chara.askForPermissionToUse ? "Yes" : "No" %></li><br>
+      <li><strong style="font-size: 30px;">Original creator:</strong ><%= chara.originalCreator %></li><br>
+      </ul><br>
+      <div class="socials">
+        <a href="<%= chara.instaLink %>"><img src="https://i.imgur.com/H9kKCjc.png" style="height: 60px; width: auto;"></a>
+          <a href="<%= chara.twitterLink %>"><img src="https://i.imgur.com/l2klKbq.png" style="height: 60px; width: auto;;"></a>
+            <a href="<%= chara.tiTokLink %>"><img src="https://i.imgur.com/7I76iOT.png" style="height: 60px; width: auto;"></a>
+        </div>
 
+</div>
+  
 
+<a href="/ocparadise/"> Back</a>
+  
 
 <%-include('./partials/footer.ejs')%>
