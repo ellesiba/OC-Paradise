@@ -39,7 +39,7 @@
     font-family: 'Fascinate', cursive;
     font-size: 50px;
     text-align: center;
-    color: rgb(221, 214, 204);
+    color: rgb(83, 62, 54);
 }
 
 
@@ -73,7 +73,12 @@ button{
     align-self: center;
     color: blanchedalmond;
     font-size: 20px;
-
+    z-index: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    z-index: 0;
 
 }
 
@@ -99,25 +104,28 @@ textarea{
     font-size: 18px;
     width: 400px;
     word-break: break-word;
-
+    opacity: 50%;
 }
 
 input{
     font-family: 'Nanum Pen Script', cursive;
     font-size: 18px;
     width: 400px;
-
-
+    opacity: 50%;
 }
 
 select{
     font-family: 'Nanum Pen Script', cursive;
     font-size: 18px;
+    opacity: 50%;
 }
 
 .submit{
-right: 50px
-}
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  z-index: 0;}
 
 nav button{
   z-index: 0;
@@ -136,4 +144,15 @@ nav button{
   height: 300px;
   width: auto;
   z-index: 0;
+}
+@media (max-width: 768px) {
+  .container {
+    height: auto;
+    width: 100%;
+  }
+  
+  .content {
+    position: relative;
+    padding: 10px;
+  }
 }

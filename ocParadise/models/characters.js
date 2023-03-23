@@ -11,17 +11,14 @@ const charaSchema = new mongoose.Schema({
     personality:{type: String, required: true},
     relationships: {type: String, required: true},
     goalsMotivations:{type: String, required: true},
-    fearsWeakness: {type: String, required: true},
     skills:{type: String, required: true},
     fearsWeakness:{type: String, required: true},
-    mostTreasured:{type: String, required: true},
+    mostTreasured:{type: String},
     askForPermissionToUse: { type: Boolean, required: true },
     originalCreator: { type: String, required: true },
-    socialMedia: {
-        instagram: { type: String },
-        twitter: { type: String },
-        tiktok: { type: String }
-      }
+    instagram: { type: String },
+    twitter: { type: String },
+    tiktok: { type: String }
 });
 
 const chara = mongoose.model('chara', charaSchema);

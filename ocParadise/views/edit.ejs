@@ -2,6 +2,7 @@
 <link href="/css/styleEdit.css" type="text/css" rel="stylesheet"> 
 </head>
 <body>
+<a href="/ocparadise"><img src="https://i.imgur.com/ZZD5u3W.png" alt="logo" class="logo"></a>
 
 <div class="background">
     <div class="container">
@@ -11,7 +12,7 @@
 <form action="/ocparadise/<%=id%>?_method=PUT" method="POST">
 
   <label for="image">Image URL:</label>
-  <input type="text" id="image" name="image" value="<%= chara.image %>">
+  <input type="text" id="image" name="image" value="<%= chara.image %>"><br>
 
   <label for="name">Name:</label>
   <input type="text" placeholder="Character Name Here" id="name" name="name" value="<%= chara.name %>"><br>
@@ -61,7 +62,7 @@
   <textarea id="skills" name="skills"><%= chara.skills %></textarea><br>
 
   <label for="mostTreasured">Most Treasured:</label>
-  <textarea id="mostTreasured" name="mostTreasured"><%= chara.mostTreasured %></textarea><br>
+  <textarea id="mostTreasured" name="mostTreasured"><%= chara.mostTreasured %></textarea><br><br>
 
 
   <!-- <label for="askForPermissionToUse">Ask for permission to use:</label>
@@ -82,10 +83,9 @@
   <label for="tikTokLink">Tiktok:</label>
   <input type="text" id="tikTokLink" name="tikTokLink" value="<%= chara.tikTokLink %>"> -->
 
-  <button type="submit" id="submit" style="right: 90px;">Save Changes</button>
+  <button type="submit" id="submit" style="right: 90px;">Save Changes</button><br>
 </form>
-
-<a href="/ocparadise/"> Back</a>
+<a href="/ocparadise/"><button>Back</button></a>
 
 
 <%- include('./partials/footer.ejs') %>

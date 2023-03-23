@@ -3,7 +3,7 @@
 <link href="/css/styleIndex.css" type="text/css" rel="stylesheet"> 
 </head>
 <body>
-<a href="/ocparadise"><img src="https://i.imgur.com/m7kJuH2.png" alt="logo" class="logo"></a>
+<a href="/ocparadise"><img src="https://i.imgur.com/ZZD5u3W.png" alt="logo" class="logo"></a>
 
 <h1>Welcome to Paradise</h1>
 <nav>
@@ -16,19 +16,18 @@
         <div class="wrapper">
         <!-- <div class="fullwrap">  -->
 
-        <% for (let i = 0; i < Chara.length; i++ ) { %>
+        <% for (let i = 0; i < chara.length; i++ ) { %>
             <li>
                 <div class="fullwrap"> 
-                <a href="/ocparadise/<%=i%>">
+                <a href="/ocparadise/<%=chara[i].id%>">
                     <div class="wrapper">
                     <!-- <div class="fullwrap">  -->
-                    <img src="<%=seedChara[i].image%>" id="display-img" style="width: 250px; height: 250px; border-radius: 1000px;"/>
+                    <img src="<%=chara[i].image%>" id="display-img" style="width: 250px; height: 250px; border-radius: 1000px;"/>
                     <div class="fullcap">
-                    <%=seedChara[i].name.charAt(0).toUpperCase() + seedChara[i].name.slice(1)%>
+                    <%=chara[i].name.charAt(0).toUpperCase() + chara[i].name.slice(1)%>
                     </div>
                     </div>
                 </div>
-                <!-- </div> -->
                     <form action="/ocparadise/<%= i %>/edit" method="GET">
                         <button type="submit">Edit</button>
                     </form>

@@ -2,7 +2,7 @@
 <link href="/css/styleShow.css" type="text/css" rel="stylesheet"> 
 </head>
 <body>
-<a href="/ocparadise"><img src="https://i.imgur.com/m7kJuH2.png" alt="logo" class="logo"></a>
+<a href="/ocparadise"><img src="https://i.imgur.com/ZZD5u3W.png" alt="logo" class="logo"></a>
 <!-- <img src="<%= chara.image %>" alt="<%= chara.name %>;" id="chara-profile" style="width: 350px; height: 350px; border-radius: 1000px; text-align: center;"> -->
 
 <div class="background">
@@ -27,19 +27,18 @@
         <li><strong style="font-size: 30px;">Fears and Weaknesses:</strong> <p><%= chara.fearsWeakness %></p></li><br>
         <li><strong style="font-size: 30px;">Skills:</strong> <p><%= chara.skills %></p></li><br>
         <li><strong style="font-size: 30px;">Most Treasured Possession:</strong> <p><%= chara.mostTreasured %></p></li><br>
-      <li><strong style="font-size: 30px;">Ask for permission to use:</strong> <%= chara.askForPermissionToUse ? "Yes" : "No" %></li><br>
+      <li><strong style="font-size: 30px;">Ask for permission to use in a personal or noncommercial work:</strong> <%= chara.askForPermissionToUse ? "Yes" : "No" %></li><br>
       <li><strong style="font-size: 30px;">Original creator:</strong ><%= chara.originalCreator %></li><br>
       </ul><br>
       <div class="socials">
-        <a href="<%= chara.instaLink %>"><img src="https://i.imgur.com/H9kKCjc.png" style="height: 60px; width: auto;"></a>
-          <a href="<%= chara.twitterLink %>"><img src="https://i.imgur.com/l2klKbq.png" style="height: 60px; width: auto;;"></a>
-            <a href="<%= chara.tiTokLink %>"><img src="https://i.imgur.com/7I76iOT.png" style="height: 60px; width: auto;"></a>
+        <a href="<%= chara.instagram %>"><img src="https://i.imgur.com/H9kKCjc.png" style="height: 60px; width: auto;"></a>
+          <a href="<%= chara.twitter %>"><img src="https://i.imgur.com/l2klKbq.png" style="height: 60px; width: auto;;"></a>
+            <a href="<%= chara.tictok %>"><img src="https://i.imgur.com/7I76iOT.png" style="height: 60px; width: auto;"></a>
         </div>
 
 </div>
-  
 
-<a href="/ocparadise/"> Back</a>
+<a href="/ocparadise/"><button>Back</button></a>
   
 
 <%-include('./partials/footer.ejs')%>
