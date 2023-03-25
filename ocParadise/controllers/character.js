@@ -4,7 +4,6 @@ const router = express.Router()
 const Chara = require('../models/characters.js')
 const mongoose = require('mongoose');
 
-
 //======================== MIDDLEWARE FOR AUTH. ROUTES ===============================
 // const authRequired = (req, res, next) => {
 // 	console.log(req.session.currentUser);
@@ -69,11 +68,10 @@ router.post('/', (req, res) => {
 
 // ------------ Delete ----------
 
-router.delete('/ocparadise/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
 	Chara.findByIdAndDelete(req.params.id, (err, deletedChara) => {
 		if (err) {
 			console.log(err)
-			res.send(err)
 		} else {
 			console.log(deletedChara)
 			res.redirect('/ocparadise')
@@ -88,7 +86,6 @@ router.get('/:id/edit', (req, res) => { //auth required
 	Chara.findById(req.params.id, (err, foundChara) => {
 		if(err) {
 			console.log(err)
-			res.send(err)
 		} else {
 			res.render('edit.ejs', {
 				chara: foundChara,
@@ -100,24 +97,36 @@ router.get('/:id/edit', (req, res) => { //auth required
 })
 
 
-
 // ------------ UPDATE ----------
 
 // Update a character
-router.put('/ocparadise/:id', (req, res) => {
-  const id = mongoose.Types.ObjectId(req.params.id);
-  Chara.findByIdAndUpdate(id, req.body, { new: true }, (err, updatedChara) => {
-    if (err) {
-      console.log(err);
-      res.send(err);
-    } else {
-      console.log(updatedChara);
+// router.put('/ocparadise/:id', (req, res) => {
+// 	const { id } = req.params; 
+// 	Chara.findByIdAndUpdate(id, req.body, { new: true },
+// 	  (err, updatedChara) => {
+// 	  if (err) {
+// 		console.log(err);
+// 		res.send(err);
+// 	  } else {
+// 		console.log(updatedChara);
+// 		res.redirect('/ocparadise');
+// 	  }
+// 	});
+//   });
+  
+  router.put('/:id', async (req, res) => {
+    try {
+      const updatedChara = await Chara.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        { new: true }
+      );
       res.redirect('/ocparadise');
+    } catch (err) {
+      res.status(500).json({ error: err.message });
     }
   });
-});
-
-
+  
 
 // ======================== EXPORTS ===============================
 

@@ -9,8 +9,7 @@
     <div class="content">
 <h1>Edit <%= chara.name %></h1>
 
-<form action="/ocparadise/<%=id%>?_method=PUT" method="POST">
-
+<form action="/ocparadise/<%=chara.id%>?_method=PUT" method="POST">
   <label for="image">Image URL:</label>
   <input type="text" id="image" name="image" value="<%= chara.image %>"><br>
 

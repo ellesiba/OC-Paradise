@@ -28,10 +28,10 @@
                     </div>
                     </div>
                 </div>
-                    <form action="/ocparadise/<%= i %>/edit" method="GET">
+                    <form action="/ocparadise/<%= chara[i].id %>/edit" method="GET">
                         <button type="submit">Edit</button>
                     </form>
-                    <form action="/ocparadise/<%= i %>/?_method=DELETE" method="POST">
+                    <form action="/ocparadise/<%= chara[i].id%>/?_method=DELETE" method="POST">
                         <button type="submit">Delete</button>
                     </form>
                 </a>
