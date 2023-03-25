@@ -66,6 +66,7 @@ body{
     text-align: left;
     margin: 20px;
     color: rgb(83, 62, 54);
+
 }
 
 a{
@@ -171,4 +172,55 @@ p{
   width: 1020px;
   word-wrap: break-word !important;
   max-width: 1020px;
+}
+
+@media (max-width: 768px) {
+  .container {
+  overflow-y: auto;
+  width: 100%;
+  top: 55px;
+  }
+
+
+.content {
+  position: relative;
+  top: 55px;
+
+}
+.logo{
+  height: 150px;
+  width: auto;
+  position: absolute;
+  top:20px;
+  left: -20px;
+}
+/* h1 {
+  display: none;
+} */
+
+nav button{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  z-index: 0;
+  font-family: 'Fascinate', cursive;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.charaInfo p{
+  word-wrap: break-word !important;
+  white-space: pre-wrap;
+  size: 600px;
+  font-size: 23px;
+  color: rgb(83, 62, 54);
+}
+
+p{
+  width: 450px;
+  word-wrap: break-word !important;
+  max-width: 450px;
+}
+
 }
