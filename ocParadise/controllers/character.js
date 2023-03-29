@@ -4,6 +4,7 @@ const router = express.Router()
 const Chara = require('../models/characters.js')
 const mongoose = require('mongoose');
 
+
 //======================== MIDDLEWARE FOR AUTH. ROUTES ===============================
 // const authRequired = (req, res, next) => {
 // 	console.log(req.session.currentUser);
