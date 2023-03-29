@@ -1,1 +1,1 @@
-web: node ocParadise/app.js
+web: node app/app.js
